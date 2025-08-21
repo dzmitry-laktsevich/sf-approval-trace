@@ -26,6 +26,10 @@ public with sharing class DTO_ApprovalWorkItem {
     @AuraEnabled
     @InvocableVariable(Label='Comments')
     public String comments;
+    
+    @AuraEnabled
+    @InvocableVariable(Label='Approval Condition Name')
+    public String approvalConditionName;
 
     public DTO_ApprovalWorkItem(ApprovalWorkItem awi) {
         itemId = awi.Id;
@@ -35,5 +39,6 @@ public with sharing class DTO_ApprovalWorkItem {
         reviewedByName = awi.ReviewedBy.Name;
         reviewedDate = awi.ReviewedDate;
         comments = awi.Comments;
+        approvalConditionName = awi.ApprovalConditionName;
     }
 }

@@ -3,7 +3,7 @@ public with sharing class InvocableMethod_GetApprovalHistory {
     public static List<List<DTO_ApprovalWorkItem>> getApprovalHistory(List<Id> recordIds) {
         List<List<DTO_ApprovalWorkItem>> approvalHistory = new List<List<DTO_ApprovalWorkItem>>();
         List<ApprovalWorkItem> approvalWorkItems = [
-                SELECT CreatedDate, Status, AssignedTo.Name, ReviewedBy.Name, ReviewedDate, RelatedRecordId, Comments
+                SELECT CreatedDate, Status, AssignedTo.Name, ReviewedBy.Name, ReviewedDate, RelatedRecordId, Comments, ApprovalConditionName
                 FROM ApprovalWorkItem
                 WHERE RelatedRecordId IN :recordIds
                 ORDER BY CreatedDate DESC

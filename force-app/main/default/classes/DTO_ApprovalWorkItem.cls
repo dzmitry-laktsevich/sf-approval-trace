@@ -4,6 +4,10 @@ public with sharing class DTO_ApprovalWorkItem {
     public String itemId;
 
     @AuraEnabled
+    @InvocableVariable(Label='Related Record Id')
+    public String relatedRecordId;
+
+    @AuraEnabled
     @InvocableVariable(Label='Created Date')
     public Datetime createdDate;
 
@@ -33,6 +37,7 @@ public with sharing class DTO_ApprovalWorkItem {
 
     public DTO_ApprovalWorkItem(ApprovalWorkItem awi) {
         itemId = awi.Id;
+        relatedRecordId = awi.RelatedRecordId;
         createdDate = awi.CreatedDate;
         status = awi.Status;
         assignedToName = awi.AssignedTo.Name;

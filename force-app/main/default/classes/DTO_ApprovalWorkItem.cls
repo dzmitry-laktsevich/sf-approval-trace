@@ -1,3 +1,6 @@
+/**
+ * Data Transfer Object for Approval Work Item
+ */
 public with sharing class DTO_ApprovalWorkItem {
     @AuraEnabled
     @InvocableVariable(Label='Id')

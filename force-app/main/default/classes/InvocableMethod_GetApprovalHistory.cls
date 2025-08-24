@@ -1,7 +1,16 @@
+/**
+ * Implements the invocable method to get the approval history for records
+ */
 public without sharing class InvocableMethod_GetApprovalHistory {
     @TestVisible
     private static List<ApprovalWorkItem> approvalWorkItemsForTest = new List<ApprovalWorkItem>();
 
+    /**
+     * Gets the approval history for the specified record IDs
+     * 
+     * @param recordIds The list of record IDs to retrieve approval history for
+     * @return A list of lists containing the approval work items for each record ID
+     */
     @InvocableMethod(Label='Get Approval History' Description='Returns Approval History for a given record' Category='Flow Approval Process')
     public static List<List<DTO_ApprovalWorkItem>> getApprovalHistory(List<Id> recordIds) {
         List<List<DTO_ApprovalWorkItem>> approvalHistory = new List<List<DTO_ApprovalWorkItem>>();

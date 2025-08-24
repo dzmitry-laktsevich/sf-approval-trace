@@ -5,13 +5,17 @@
 
 /**
 * Test class for {@link InvocableMethod_GetApprovalHistory}
-* @author Dzmitry Laktsevich
 */
 @IsTest
 private class InvocableMethod_GetApprovalHistoryTest {
     private static final String ASSIGNEE_NAME = 'ApprovalHistory Assignee';
     private static final String REVIEWER_NAME = 'ApprovalHistory Reviewer';
-    private static final String AWI_JSON_FORMAT = '\'{\'"RelatedRecordId": "{0}", "AssignedTo": \'{\'"attributes": \'{\'"type": "User"\'}\', "Name": "{1}"\'}\', "ReviewedBy": \'{\'"attributes": \'{\'"type": "User"\'}\',"Name": "{2}"\'}}\'';
+    private static final String AWI_JSON_FORMAT = 
+            '\'{\''
+                + '"RelatedRecordId": "{0}",'
+                + '"AssignedTo": \'{\'"attributes": \'{\'"type": "User"\'}\', "Name": "{1}"\'}\','
+                + '"ReviewedBy": \'{\'"attributes": \'{\'"type": "User"\'}\',"Name": "{2}"\'}'
+            + '}\'';
 
     @IsTest
     static void testSingleRecordWithApprovalItems() {

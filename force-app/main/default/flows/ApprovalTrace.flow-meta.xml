@@ -58,7 +58,7 @@
     <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
         <name>ApprovalTraceScreen</name>
-        <label>ApprovalTraceScreen</label>
+        <label>Approval Trace Screen</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <allowBack>true</allowBack>
@@ -207,6 +207,62 @@ Will be removed when Apex-Defined Collections become available in the Data Table
                 <transformType>Map</transformType>
                 <value>
                     <elementReference>dtoApprovalWorkItems[$EachItem].approvalConditionName</elementReference>
+                </value>
+            </transformValueActions>
+            <transformValueActions>
+                <outputFieldApiName>ApprovalSubmissionId</outputFieldApiName>
+                <transformType>Map</transformType>
+                <value>
+                    <elementReference>dtoApprovalWorkItems[$EachItem].approvalSubmissionId</elementReference>
+                </value>
+            </transformValueActions>
+            <transformValueActions>
+                <outputFieldApiName>AssignedToId</outputFieldApiName>
+                <transformType>Map</transformType>
+                <value>
+                    <elementReference>dtoApprovalWorkItems[$EachItem].assignedToId</elementReference>
+                </value>
+            </transformValueActions>
+            <transformValueActions>
+                <outputFieldApiName>CreatedById</outputFieldApiName>
+                <transformType>Map</transformType>
+                <value>
+                    <elementReference>dtoApprovalWorkItems[$EachItem].createdById</elementReference>
+                </value>
+            </transformValueActions>
+            <transformValueActions>
+                <outputFieldApiName>FlowOrchestrationWorkItemId</outputFieldApiName>
+                <transformType>Map</transformType>
+                <value>
+                    <elementReference>dtoApprovalWorkItems[$EachItem].flowOrchestrationWorkItemId</elementReference>
+                </value>
+            </transformValueActions>
+            <transformValueActions>
+                <outputFieldApiName>Name</outputFieldApiName>
+                <transformType>Map</transformType>
+                <value>
+                    <elementReference>dtoApprovalWorkItems[$EachItem].itemName</elementReference>
+                </value>
+            </transformValueActions>
+            <transformValueActions>
+                <outputFieldApiName>RelatedRecordId</outputFieldApiName>
+                <transformType>Map</transformType>
+                <value>
+                    <elementReference>dtoApprovalWorkItems[$EachItem].relatedRecordId</elementReference>
+                </value>
+            </transformValueActions>
+            <transformValueActions>
+                <outputFieldApiName>RelatedRecordObjectName</outputFieldApiName>
+                <transformType>Map</transformType>
+                <value>
+                    <elementReference>dtoApprovalWorkItems[$EachItem].relatedRecordObjectName</elementReference>
+                </value>
+            </transformValueActions>
+            <transformValueActions>
+                <outputFieldApiName>ReviewedById</outputFieldApiName>
+                <transformType>Map</transformType>
+                <value>
+                    <elementReference>dtoApprovalWorkItems[$EachItem].reviewedById</elementReference>
                 </value>
             </transformValueActions>
         </transformValues>

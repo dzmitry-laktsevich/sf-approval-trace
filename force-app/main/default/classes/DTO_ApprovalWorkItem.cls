@@ -12,20 +12,52 @@ public with sharing class DTO_ApprovalWorkItem {
     public String itemId;
 
     @AuraEnabled
-    @InvocableVariable(Label='Related Record Id')
-    public String relatedRecordId;
+    @InvocableVariable(Label='Approval Condition Name')
+    public String approvalConditionName;
+
+    @AuraEnabled
+    @InvocableVariable(Label='Approval Submission Id')
+    public String approvalSubmissionId;
+
+    @AuraEnabled
+    @InvocableVariable(Label='Assigned To Id')
+    public String assignedToId;
+
+    @AuraEnabled
+    @InvocableVariable(Label='Assigned To')
+    public String assignedToName;
+
+    @AuraEnabled
+    @InvocableVariable(Label='Comments')
+    public String comments;
+
+    @AuraEnabled
+    @InvocableVariable(Label='Created By Id')
+    public String createdById;
 
     @AuraEnabled
     @InvocableVariable(Label='Created Date')
     public Datetime createdDate;
 
     @AuraEnabled
-    @InvocableVariable(Label='Status')
-    public String status;
+    @InvocableVariable(Label='Flow Orchestration Work Item Id')
+    public String flowOrchestrationWorkItemId;
 
     @AuraEnabled
-    @InvocableVariable(Label='Assigned To')
-    public String assignedToName;
+    @InvocableVariable(Label='Name')
+    public String itemName;
+
+    @AuraEnabled
+    @InvocableVariable(Label='Related Record Id')
+    public String relatedRecordId;
+
+    @AuraEnabled
+    @InvocableVariable(Label='Related Record Object Name')
+    public String relatedRecordObjectName;
+
+    @AuraEnabled
+    @InvocableVariable(Label='Reviewed By Id')
+    public String reviewedById;
 
     @AuraEnabled
     @InvocableVariable(Label='Reviewed By')
@@ -36,22 +68,25 @@ public with sharing class DTO_ApprovalWorkItem {
     public Datetime reviewedDate;
 
     @AuraEnabled
-    @InvocableVariable(Label='Comments')
-    public String comments;
-    
-    @AuraEnabled
-    @InvocableVariable(Label='Approval Condition Name')
-    public String approvalConditionName;
+    @InvocableVariable(Label='Status')
+    public String status;
 
     public DTO_ApprovalWorkItem(ApprovalWorkItem awi) {
         itemId = awi.Id;
-        relatedRecordId = awi.RelatedRecordId;
-        createdDate = awi.CreatedDate;
-        status = awi.Status;
+        approvalConditionName = awi.ApprovalConditionName;
+        approvalSubmissionId = awi.ApprovalSubmissionId;
+        assignedToId = awi.AssignedToId;
         assignedToName = awi.AssignedTo.Name;
+        comments = awi.Comments;
+        createdById = awi.CreatedById;
+        createdDate = awi.CreatedDate;
+        flowOrchestrationWorkItemId = awi.FlowOrchestrationWorkItemId;
+        itemName = awi.Name;
+        relatedRecordId = awi.RelatedRecordId;
+        relatedRecordObjectName = awi.RelatedRecordObjectName;
+        reviewedById = awi.ReviewedById;
         reviewedByName = awi.ReviewedBy.Name;
         reviewedDate = awi.ReviewedDate;
-        comments = awi.Comments;
-        approvalConditionName = awi.ApprovalConditionName;
+        status = awi.Status;
     }
 }

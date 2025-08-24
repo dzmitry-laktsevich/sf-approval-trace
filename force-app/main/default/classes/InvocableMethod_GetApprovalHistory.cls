@@ -41,7 +41,21 @@ public without sharing class InvocableMethod_GetApprovalHistory {
         }
 
         return [
-            SELECT CreatedDate, Status, AssignedTo.Name, ReviewedBy.Name, ReviewedDate, RelatedRecordId, Comments, ApprovalConditionName
+            SELECT ApprovalConditionName,
+                    ApprovalSubmissionId,
+                    AssignedToId,
+                    AssignedTo.Name,
+                    Comments,
+                    CreatedById,
+                    CreatedDate,
+                    FlowOrchestrationWorkItemId,
+                    Name,
+                    RelatedRecordId,
+                    RelatedRecordObjectName,
+                    ReviewedById,
+                    ReviewedBy.Name,
+                    ReviewedDate,
+                    Status
             FROM ApprovalWorkItem
             WHERE RelatedRecordId IN :recordIds
             ORDER BY CreatedDate DESC

@@ -1,6 +1,6 @@
 # Salesforce Approval Trace
 
-A custom **Approval Trace** component replaces the standard Approval Trace for visualizing the approval history for **Flow Approval Orchestartions**.
+A custom **Approval Trace** component replaces the standard Approval Trace for visualizing the approval history for **Flow Approval Orchestrations**.
 
 ## Key Advantages
 

@@ -77,7 +77,7 @@ public with sharing class DTO_ApprovalWorkItem {
         approvalSubmissionId = awi.ApprovalSubmissionId;
         assignedToId = awi.AssignedToId;
         assignedToName = awi.AssignedTo.Name;
-        comments = awi.Comments;
+        comments = awi.Comments?.unescapeHtml4();
         createdById = awi.CreatedById;
         createdDate = awi.CreatedDate;
         flowOrchestrationWorkItemId = awi.FlowOrchestrationWorkItemId;
